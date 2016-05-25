@@ -1,3 +1,4 @@
+
 var _this = document.getElementById("js-load-more");
 _this.onclick = loadMorePosts;
 
@@ -47,3 +48,6 @@ function loadMorePosts() {
 
     });
 }
+
+
+

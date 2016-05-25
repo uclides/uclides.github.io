@@ -9,10 +9,12 @@
 
 $spacing-unit:     30px;
 $super-search:     rgba(0, 191, 255, 0.85);
-$grey-color:       #828282;
+$grey-color:       #BDBDBD;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-
+$primary-color: #eee;
+$hover-color: #607D8B;
+$space_in_span: 0.5em;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -22,3 +24,140 @@ $grey-color-dark:  darken($grey-color, 25%);
         "post",
         "search"
 ;
+
+//Custom nav 
+
+#nav{
+	background: $primary-color;
+}
+.mdl-layout__header .mdl-layout__drawer-button{
+	background: $primary-color;	
+}
+#icon{
+	background: $primary-color;	
+}
+
+//end custom nav
+
+span>a{	
+	margin-right: $space_in_span;
+	margin-left: $space_in_span;
+}
+span a i:hover {
+color: $hover-color;
+}
+span a i {
+color: $grey-color;
+}
+@media(max-width: 360px){
+    display: inline-block;
+    /* float:left;  remove*/
+    margin-left: 3px;
+    margin-right: 3px;
+}
+@media(max-width: 480px){
+    display: inline-block;
+    /* float:left;  remove*/
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#xxx{
+  text-align: center;
+}
+#xxx > span{
+  display: inline-block;
+    position: relative;
+}
+#xxx > span > a{
+    float: right;
+}
+//image circle
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url('../img/user.png') center / cover;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	margin: 0 auto;
+}
+
+.terminal-window {
+  text-align: left;
+  margin: auto;
+  height: 400px;
+  margin-bottom: 2em;   
+  position: relative;
+}
+
+.terminal-window header {
+  background: #eee;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+}
+
+.terminal-window header .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.terminal-window header .button.green {
+  background: #3BB662;
+}
+
+.terminal-window header .button.yellow {
+  background: #E5C30F;
+}
+
+.terminal-window header .button.red {
+  background: #E75448;
+}
+
+.terminal-window section.terminal {
+  color: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #30353A;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.terminal-window section.terminal .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray { color: gray; }
+.terminal-window .green { color: green;}
+
+
