@@ -47,7 +47,7 @@ window.onresize = function () {
   var data = [
   { 
     action: 'type',
-    strings: ["npm install -g mimik^400"],
+    strings: ["bienvenido al blog^400"],
     output: '<span class="gray">+mimik@0.10.2 installed</span><br>&nbsp;',
     postDelay: 1000
   },

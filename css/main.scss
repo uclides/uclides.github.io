@@ -15,6 +15,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 $primary-color: #eee;
 $hover-color: #607D8B;
 $space_in_span: 0.5em;
+$menu_height: 500px;
+$menu_width: 100%;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -156,8 +158,37 @@ color: $grey-color;
     100% { opacity:1; }
 }
 
+//About page
 .terminal-data { display: none; }
 .terminal-window .gray { color: gray; }
 .terminal-window .green { color: green;}
+//End about
 
+//Menu page
+.android-screens{
+  text-align: left;
+  width: $menu_width;
+  height: $menu_height;
+  white-space: nowrap;
+  overflow-x: auto;
+  background: url('http://img3.themebin.com/4K_UltraHD/flat-mountains.jpg')
+}
+.next-screens{
+  text-align: right;
+  width: $menu_width;
+  height: $menu_height;
+  white-space: nowrap;
+  overflow-x: auto;
+  background: url('http://science-all.com/images/wallpapers/wallpaper-gray/wallpaper-gray-6.jpg')
+}
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+//End menu page
 
