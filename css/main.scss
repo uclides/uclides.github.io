@@ -17,6 +17,7 @@ $hover-color: #607D8B;
 $space_in_span: 0.5em;
 $menu_height: 500px;
 $menu_width: 100%;
+$font-title: 'Open Sans';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -165,30 +166,96 @@ color: $grey-color;
 //End about
 
 //Menu page
-.android-screens{
-  text-align: left;
-  width: $menu_width;
-  height: $menu_height;
-  white-space: nowrap;
-  overflow-x: auto;
-  background: url('http://img3.themebin.com/4K_UltraHD/flat-mountains.jpg')
-}
-.next-screens{
-  text-align: right;
-  width: $menu_width;
-  height: $menu_height;
-  white-space: nowrap;
-  overflow-x: auto;
-  background: url('http://science-all.com/images/wallpapers/wallpaper-gray/wallpaper-gray-6.jpg')
-}
+
 #view-source {
-  position: fixed;
-  display: block;
-  right: 0;
-  bottom: 0;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  z-index: 900;
+position: fixed;
+display: block;
+right: 0;
+bottom: 0;
+margin-right: 40px;
+margin-bottom: 40px;
+z-index: 900;
+}
+div.mdl-cell.mdl-cell--4-col > h2{
+font-family: $font-title, Light;
+font-weight: 100;
+text-align: center; 
+color: gray;
+}
+div.mdl-cell.mdl-cell--4-col > p{
+font-family: $font-title, Light;
+font-weight: 200;
+text-align: center; 
+color: gray;
+}
+.card-lesson {
+  margin: 5px;
+  min-width: 200px;
+  min-height: 100px;
+  & > .mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  & > .mdl-card__title {
+    align-items: flex-start;
+    & > h4 {
+      margin-top: 0;
+    }
+  }
+  & > .mdl-card__title,
+  & > .mdl-card__supporting-text,
+  & > .mdl-card__actions,
+  & > .mdl-card__actions > .mdl-button {
+    color: #fff;
+  }
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp{
+  background: #F6F6F6;
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover{
+  background: #E3E3E3;
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp button{
+  background: #C8C8C8;
+  color: #3B3B3B;
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover button{
+  background: #3B3B3B;
+  color: #ffffff;
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover #cat1{
+  -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+    transform: scale(1.03, 1.03);
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover #cat2{
+  -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+    transform: scale(1.03, 1.03);
+}
+div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover #cat3{
+  -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+    transform: scale(1.03, 1.03);
+}
+#cat1{
+  background: url('https://www.dafont.com/forum/attach/orig/4/1/412076.png') center / cover no-repeat #eee;
+  transition: 0.3s ease;
+}
+#cat2{
+  background: url('https://d13yacurqjgara.cloudfront.net/users/180057/screenshots/2256895/comingsoon.jpg') center / cover no-repeat #eee;
+  transition: 0.3s ease;
+}
+#cat3{
+  background: url('https://d13yacurqjgara.cloudfront.net/users/180057/screenshots/2256895/comingsoon.jpg') center / cover no-repeat #eee;
+  transition: 0.3s ease;
+}
+div.mdl-card__supporting-text.card_text_custom{
+  color: black;
 }
 //End menu page
 
+@media (max-width:320px){
+
+} 
