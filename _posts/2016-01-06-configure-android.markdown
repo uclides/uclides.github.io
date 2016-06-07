@@ -10,18 +10,28 @@ image: /img/android-studio.png
 Iniciaremos configurando todo lo necesario para empezar a desarrollar nuestras aplicaciones en android. Para ello
 necesitaremos un equipo que cumpla con los siguientes requisitos mínimos:
 
-|                  Windows                   | #   |              Mac               | #   |             Linux              |
-|:-----------------------------------------: |---  |:-----------------------------: |---  |:-----------------------------: |
-| Microsoft® Windows® 7/8/10 (32- ó 64-bit)  | #   |   Mac® OS X® 10.8.5 ó mayor    | #   |          GNOME or KDE          |
-|              2 GB RAM minimo               | #   |        2 GB RAM minimo         | #   |        2 GB RAM minimo         |
-|       2 GB disponible en Disco Duro        | #   | 2 GB disponible en Disco Duro  | #   |  libreria GNU C (glibc) 2.11   |
-|        resolución minima 1280 x 800        | #   |  resolución minima 1280 x 800  | #   |        2 GB RAM minimo         |
-|        Java Development Kit (JDK) 8        | #   |  Java Development Kit (JDK) 6  | #   | 2 GB disponible en Disco Duro  |
-|                                            | #   |                                | #   |  resolución minima 1280 x 800  |
-|                                            | #   |                                | #   |  Java Development Kit (JDK) 8  |
-|                                            | #   |                                | #   |                                |
-|                                            |     |                                |     |                                |
+##### Windows
+* Microsoft® Windows® 7/8/10 (32- ó 64-bit)
+* 2 GB RAM minimo
+* 2 GB disponible en Disco Duro
+* resolución minima 1280 x 800 
+* Java Development Kit (JDK) 8
 
+##### Mac
+* Mac® OS X® 10.8.5 ó mayor
+* 2 GB RAM minimo
+* 2 GB disponible en Disco Duro
+* resolución minima 1280 x 800
+* Java Development Kit (JDK) 6
+
+##### Linux
+* GNOME or KDE
+* 2 GB RAM minimo
+* libreria GNU C (glibc) 2.11
+* 2 GB RAM minimo
+* 2 GB disponible en Disco Duro 
+* resolución minima 1280 x 800 
+* Java Development Kit (JDK) 8
 
 
 #### Descargar elementos necesarios

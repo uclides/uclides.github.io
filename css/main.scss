@@ -289,6 +289,19 @@ img[alt="directory"] {
   width: 100%;
   background: #E4E4E4;
 }
+.post-content p{
+  text-align: justify;
+}
+.post-main .post-section {
+    border-radius: 2px;
+    padding-top: 80px;
+    padding-right: 28px;
+    padding-bottom: 80px;
+    padding-left: 28px;
+    margin-bottom: 80px;
+}
+
+
 @media (max-width:320px){
 
 } 
