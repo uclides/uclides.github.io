@@ -268,7 +268,27 @@ div.mdl-card__supporting-text.card_text_custom{
   margin-top: 4em;
  }
 //End menu page
+img[alt="minipic"] { 
+  max-width:  500px; 
+  height: auto;
+  display:block;
+  margin:auto;
 
+}
+img[alt="directory"] { 
+  max-width:  800px; 
+  height: auto;
+  display:block;
+  margin:auto;
+
+}
+.highlight pre{
+  overflow-x: auto;
+}
+.next{
+  width: 100%;
+  background: #E4E4E4;
+}
 @media (max-width:320px){
 
 } 
