@@ -5,6 +5,7 @@ date:   2016-06-01 12:00:00
 categories: android
 author: Uclides Gil
 image: /img/android-studio.png
+page: "http://127.0.0.1:4000/android/configurar-tu-equipo"
 ---
 
 Iniciaremos configurando todo lo necesario para empezar a desarrollar nuestras aplicaciones en android. Para ello

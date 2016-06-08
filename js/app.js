@@ -113,6 +113,3 @@ function runScripts(data, pos) {
           break;
     }
 }
-
-
- 

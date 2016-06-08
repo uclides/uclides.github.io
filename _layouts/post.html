@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<div class="post-ribbon" style="height: 400px; background: url('/img/android-studio.png') center / cover no-repeat #eee;"></div>
+<div class="post-ribbon">
+<p class="banner">{{page.title}}</p>
+</div>
 
 <main class="post-main mdl-layout__content" style="margin-top: 2em;">
   <div class="post-container mdl-grid">
@@ -15,7 +17,19 @@ layout: default
         volver
         </div>
       </button>
-      <div class="mdl-color-text--grey-500">
+      <ul style="padding: initial;">
+        <li style="display: inline-block; vertical-align: super;">
+          <span>Compartir</span>
+        </li>
+        <li style="display: inline-block;">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{post.page}}" data-text="{{post.title}}" data-via="uclidesGil" >Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </li>
+        <li style="display: inline-block;">
+          <div class="g-plus" data-action="share" data-annotation="bubble"></div> 
+        </li>
+      </ul>
+      <div class="mdl-color-text--grey-500" style="margin-top: 10px;">
       {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}{% if page.categories %} • {% for cat in page.categories %} {{ cat }} {% endfor %} {% endif %}
       </div>
       <h3>{{ page.title }}</h3>
