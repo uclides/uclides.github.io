@@ -12,6 +12,14 @@ google_plus_com: '109485346959707049693'  # Community link
 google_plus_per: '+GDGManagua'  #Personal link
 facebook_app_id: 12345
 
+#language
+index:
+  es:
+  en: en_index.html
+android:
+  es:
+  en: en_android.html  
+
 # Layout settings
 header_type: default  # values [ drawer, default ]
 post_type: highlight    # values [ highlight, default ]
@@ -27,7 +35,6 @@ more_vert:
   option3:
     name: Cool Option 3
     link: www.myawesomelink.com
-
 disqus: true
 disqus_shortname: 'uclides'
 

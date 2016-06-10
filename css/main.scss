@@ -292,8 +292,18 @@ img[alt="directory"] {
 .post-content p{
   text-align: justify;
 }
-
-
+.android-search-box {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.bar{
+  color: #929292;
+  margin-left: 1em;
+  text-decoration: none;
+}
 @media (max-width:2560px){
   .post-main .post-section {
     border-radius: 2px;
@@ -305,7 +315,6 @@ img[alt="directory"] {
 }
   .post-ribbon{
   height: 400px;
-  background: url('/img/android-studio.png') center / cover no-repeat #eee;
 }
 .banner{
   margin-left: 20px;
@@ -316,6 +325,7 @@ img[alt="directory"] {
   color: #ffffff;
 
 }
+
 }
 
 @media (max-width:320px){
@@ -329,9 +339,7 @@ img[alt="directory"] {
 }
 .post-ribbon{
   height: 150px;
-  background: url('/img/android-studio.png') no-repeat #eee;
   background-size: 135%;
-
 }
 .banner{
   margin-left: 5px;

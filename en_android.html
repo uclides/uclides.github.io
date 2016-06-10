@@ -1,8 +1,8 @@
 ---
 layout: default
 ref: android
-lang: es
-permalink: /android/
+lang: en
+permalink: /en/android/
 ---
 
 <style>
@@ -36,8 +36,8 @@ permalink: /android/
 <div class="android-content mdl-layout__content">
 <div class="page-content">
   <div class="mdl-grid init-post">
-{% assign posts_es = site.posts | where:"lang","es" %}
-{% for post in posts_es %}
+{% assign posts_en = site.posts | where:"lang","en" %}
+{% for post in posts_en %}
 <div class="mdl-cell mdl-cell--4-col card-lesson mdl-card mdl-shadow--1dp">
   <a href="{{ post.url | prepend: site.baseurl }}"><div class="mdl-card__title mdl-card--expand" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
   </div></a>

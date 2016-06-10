@@ -1,82 +1,82 @@
 ---
 layout: post
-title:  "Prepara tu equipo"	
+title:  "Prepare your computer"	
 date:   2016-06-01 12:00:00
 categories: android
 author: Uclides Gil
 image: /img/android-studio.png
-page: "http://127.0.0.1:4000/android/configurar-tu-equipo"
+page: "http://127.0.0.1:4000/android/configure-your-computer"
+lang: en
 ---
 
-Iniciaremos configurando todo lo necesario para empezar a desarrollar nuestras aplicaciones en android. Para ello
-necesitaremos un equipo que cumpla con los siguientes requisitos mínimos:
+We begin by setting everything you need to start developing our apps on android. For it
+need a computer that meets the following minimum requirements:
 
 ##### Windows
 * Microsoft® Windows® 7/8/10 (32- ó 64-bit)
-* 2 GB RAM minimo
-* 2 GB disponible en Disco Duro
-* resolución minima 1280 x 800 
+* 2 GB RAM minimum
+* 2 GB available in HDD
+* minimum resolution 1280 x 800 
 * Java Development Kit (JDK) 8
 
 ##### Mac
-* Mac® OS X® 10.8.5 ó mayor
-* 2 GB RAM minimo
-* 2 GB disponible en Disco Duro
-* resolución minima 1280 x 800
+* Mac® OS X® 10.8.5 or higher
+* 2 GB RAM minimum
+* 2 GB available in HDD
+* minimum resolution 1280 x 800
 * Java Development Kit (JDK) 6
 
 ##### Linux
 * GNOME or KDE
-* 2 GB RAM minimo
-* libreria GNU C (glibc) 2.11
-* 2 GB RAM minimo
-* 2 GB disponible en Disco Duro 
-* resolución minima 1280 x 800 
+* 2 GB RAM minimum
+* library GNU C (glibc) 2.11
+* 2 GB RAM minimum
+* 2 GB available in HDD 
+* minimum resolution 1280 x 800 
 * Java Development Kit (JDK) 8
 
 
-#### Descargar elementos necesarios
+#### Download necesary elements
 
-En primera instancia debemos descargar la libreria java JDK (Java Development Kit) necesaria para poder ejecutar el Android Studio. Puedes descargar la versión compatible con tu sistema operativo [**aca**](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html){:target="_blank"}. 
+In first instance we have download the JDK java library (Java Development Kit) necesary to execute the Android Studio. You can download the version compatible with your operative system [**here**](https://www.oracle.com/technetwork/es/java/javase/downloads/index.html){:target="_blank"}. 
 
-Actualmente la version disponible es la **Java SE 8u91 / 8u92**, ingresamos en el enlace JDK como se aprecia en la imagen:
+The version currently available is **Java SE 8u91 / 8u92**, we entered the JDK link as shown in the picture:
 
 ![minipic](http://i.imgur.com/5OnfUPQ.png)
 
-Antes de proceder a descargar es necesario aceptar los terminos de licencia de Oracle y luego si seleccionar el archivo correspondiente a nuestro Sistema Operativo. Imagen de referencia:
+Before downloading you must accept the terms of license Oracle and then if you select the appropriate file to your operating system. Reference image:
 
 ![minipic](http://i.imgur.com/SmFdcLa.png)
 
-Solo queda realizar la descarga de Android Studio a través de su página oficial [**aqui**](https://developer.android.com/studio/index.html){:target="_blank"},
+There is only downloading Android Studio through its official website [**here**](https://developer.android.com/studio/index.html){:target="_blank"},
 
-#### Instalación y configuración en Windows
+#### Windows Installation and Configuration
 
-Para configurar nuestro entorno primero debemos instalar el JDK para ello iniciamos el archivo descargado previamente. 
+To set up our first environment you must install the JDK for it initiated the previously downloaded file. 
 
 ![minipic](http://i.imgur.com/qSqd8BK.png)
 
-Seguimos los pasos que nos indica el instalador. Nos da la bienvenida y seleccionamos siguiente, luego nos indica cuales son los paquetes que se procederán a instalar. Presionamos siguiente y continuamos
+We follow the steps that indicates the installer. We welcome and selected next, then tells us what are the packages that proceed to install. We press next and continue
 
 ![minipic](http://i.imgur.com/ymXW2hS.png)
 
-La siguiente pantalla nos indica la ruta en donde se procederá a instalar. **Debemos recordar esta ruta para luego agregarla a las variables de entorno**.
+The next screen indicates the path where it will proceed to install. **We must remember this route and then add it to environment variables**.
 
 ![minipic](http://i.imgur.com/YgOlgxP.png)
 
-Finalmente recibimos el mensaje indicando que se ha instalado correctamente nuestro Kit de desarrollo Java.
+Finally we received the message that has been successfully installed our Java Development Kit.
 
 ![minipic](http://i.imgur.com/38QRPkP.png)
 
-##### Configurar variable de entorno
+##### Set environment variable
 
-Para ello es necesario conocer la ruta donde fue instalado el JDK podemos acceder al directorio como por ejemplo en mi caso de ** C:\Program Files (x86)\Java\jdk1.8.0_91\bin** 
+This requires knowing the path where the JDK was installed can access the directory such as in my case **C:\Program Files (x86)\Java\jdk1.8.0_91\bin** 
 
 ![directory](http://i.imgur.com/aeDWhi0.png)
 
-Ya conocida la ruta en donde se encuentran nuestros binarios nos debemos dirigir a las configuraciones avanzadas del sistema > variables de entorno. Para ello existen diversas maneras quizás cambien según la versión del Windows que posea. Para este ejemplo uso Windows 7 y lo realizo de la siguiente manera:
+Already known the path where our binaries we must turn to advanced system settings> environment variables. For this there are various ways may change depending on the version of Windows you have. For this example I use Windows 7 and I performed as follows:
 
-click derecho en **MI PC > Propiedades > Configuración avanzada del sistema > variables de entorno**. En las imágenes se aprecian los pasos:
-
+right click on **My Computer > Properties > Advanced System Settings > environment variables**. In the images are seen steps:
 
 ![minipic](http://i.imgur.com/xlw6AYr.png)
 
@@ -84,112 +84,111 @@ click derecho en **MI PC > Propiedades > Configuración avanzada del sistema > v
 
 ![minipic](http://i.imgur.com/fXz5fGm.png)
 
-Luego seleccionamos la variable **Path** y accedemos a ella. Al final de la línea creamos un nuevo valor. Debemos colocar un punto y coma **";"** para agregar una nueva ruta, en este caso la actual de nuestra ruta de instalación del JDK. en mi caso **"C:\Program Files (x86)\Java\jdk1.7.0_71\bin"**. aceptamos y aplicamos. 
+Then select the variable **Path** and access it. At the end of the line we create a new value. We must put a semicolon **";"** to add a new route, in this case of our current installation path of the JDK. in my case **"C:\Program Files (x86)\Java\jdk1.7.0_71\bin"**. We accept and apply. 
 
 ![minipic](http://i.imgur.com/k6KEgGS.png)
 
-Luego de esto podemos abrir un **Procesador de Comandos de Windows** (cmd) y verificar que ya disponemos de java en nuestro equipo; escribimos lo siguiente en nuestra consola **"java -version"** e imprimirá un mensaje como el siguiente:
+After that we can open a **Windows Command Processor** (cmd) and verify that already have java in our team; We wrote the following in our console **"java -version"** and it will print a message like the following:
 
 ![minipic](https://i.imgur.com/WhaG3Gf.png)
 
-¡Listo!  ya disponemos de java instalado y configurado en nuestro equipo. Ahora continuamos con el siguiente paso.
+¡Ready! already have java installed and configured on our team. Now we continue with the next step.
 
-##### Instalar Android Studio
+##### Install Android Studio
 
-La instalación de nuestro IDE Android es muy sencilla, nos dirigimos a la carpeta donde previamente lo hemos descargado y procedemos a iniciar el proceso. En dicho proceso solo debemos seguir los pasos por defecto que nos indica la interfaz; quizás tome algún tiempo mientras carga todos los complementos. 
+The installation of our Android IDE is very simple, we go to the folder where you have previously downloaded and proceed to start the process. In this process we just follow the steps default indicates the interface; it may take some time while charging all supplements. 
 
-Al momento de iniciar por primera vez Android Studio nos pedirá descargar los paquetes esenciales para su funcionamiento, dejemos que los realice sin problema alguno. Puede tomar un poco de tiempo dependiendo de la conexión a internet que poseas.
-Ahora bien, les recomiendo obtener todos los paquetes disponibles relacionados a las distintas versiones que posee Android para el desarrollo de las aplicaciones y tener nuestro entorno completo y al día para los temas que se verán muy pronto. Para ello debemos seguir los siguientes pasos: 
+When starting for the first time Android Studio will ask to download the packages essential for its operation, let the place without any problems. It may take some time depending on the internet connection you have. Now, I recommend you get all available packages related to the different versions that Android has for the development of applications and have our entire environment and a day to topics that will be very soon. To do this we must take the following steps: 
 
-Al momento de crear un nuevo proyecto nos dirigimos a la sección de Configuración > SDK Manager y accedemos a ella
+When creating a new project we turn to the section Settings> SDK Manager and access it
 
 ![minipic](https://i.imgur.com/4lowGVK.png)
 
-Se abrirá otra ventana en donde tenemos que ingresar a **Launch Standalone SDK Manager**
+another window where we have to enter opens to **Launch Standalone SDK Manager**
 
 ![minipic](https://i.imgur.com/3US3126.png)
 
-Seleccionamos todos los paquetes y luego aceptamos los paquetes a instalar. 
+Select all packages and then accept the packages to install. 
 
 ![minipic](https://i.imgur.com/O8GYmv6.png)
 
-Esperamos a que se descarguen todos y tendremos a nuestro IDE completamente actualizado. :-)
+We hope that everyone will have to download and completely updated our IDE. :-)
 
-#### Instalación y configuración en Linux
+#### Linux installation and configuration
 
-Para configurar en Linux he realizado la prueba en mi equipo. Personalmente uso Ubuntu para así facilitar un poco las cosas
-y no complicar mucho el proceso de instalación, **ustedes puedes utilizar cualquier otra distribución de Linux**, las que mas 
-les guste o se encuentren más familiarizada. Ahora bien los pasos podrían cambiar dependiendo a cual distro usen. Como poseo
-**Ubuntu 14.04** en este momento esos son los pasos que indicaré. 
+To configure Linux I have done the test on my computer. I personally use Ubuntu to facilitate things a bit
+and not greatly complicate the installation process, **you can use any other Linux distribution**, which more
+they like or are more familiar. Now the steps may change depending on which distro to use. as possess
+**Ubuntu 14.04** at this time these are the steps that indicate. 
 
 
 
-En primera instancia vamos a instalar la última versión de Java JDK disponible para la plataforma, para el caso de Ubuntu realizaremos lo siguiente:
+In the first instance we will install the latest version of Java JDK available for the platform, in the case of Ubuntu we will make the following:
 
-Añadimos el repositorio para disponer de Java
+Add the repository to have Java
 {% highlight shell %}
 sudo add-apt-repository ppa:webupd8team/java
 {% endhighlight %}
 
-actualizamos nuestro sistema
+We update our system
 {% highlight shell %}
 sudo apt-get update
 {% endhighlight %}
 
-Para la versión 8:
+For version 8:
 {% highlight shell %}
 sudo apt-get install oracle-java8-installer
 {% endhighlight %}
 
-Para la versión 7:
+For version 7:
 {% highlight shell %}
 sudo apt-get install oracle-java7-installer
 {% endhighlight %}
 
-Finalmente verificamos que la instalación se ha realizado correctamente con
+Finally we verify that the installation was successful with
 {% highlight shell %}
 java -version
 {% endhighlight %}
 
 
-##### Instalar Android Studio (Ubuntu)
+##### Install Android Studio (Ubuntu)
 
-Ubuntu nos permite utilizar una herramienta que nos facilita este proceso, se llama ubuntu make. Primero instalaremos dicho 
-paquete y luego procederemos a descargar Android Studio desde allí. Para obtener Ubuntu Make necesitamos lo siguiente:
+Ubuntu allows us to use a tool that facilitates this process, is called ubuntu make. First install this
+package and then proceed to download Android Studio from there. For Ubuntu Make need the following:
 
-Añadimos el repositorio para Ubuntu Make
+Add the repository for Ubuntu Make
 {% highlight shell %}
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 {% endhighlight %}
 
 
-Actualizamos nuestro Sistema
+We update our system
 {% highlight shell %}
 sudo apt-get update
 {% endhighlight %}
 
 
-Instalar Make
+Install Make
 {% highlight shell %}
 sudo apt-get install Ubuntu-make
 {% endhighlight %}
 
 
-Ya instalado, procedemos a instalar Android Studio de la siguiente manera:
+Already installed, we proceed to install Android Studio as follows:
 {% highlight shell %}
 umake android-studio
 {% endhighlight %}
 
 
-Si necesitas permisos puedes usar:
+If you need permissions you can use:
 {% highlight shell %}
 sudo umake android-studio
 {% endhighlight %}
 
 
-Aceptas todas las condiciones necesarias que te indique la consola, y listo. Tienes el IDE completamente instalado. Para poner al día tu IDE en la sección de Windows te explico cómo; son los mismo pasos a realizar.
+Accept all the conditions that prompted the console, and ready. You have fully installed the IDE. To update your IDE on Windows section I explain how; They are the same steps to perform.
 
-**Estamos listo para iniciar con nuestro aprendizaje.**
+**We are ready to start with our learning.**
 
 
 

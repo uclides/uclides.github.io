@@ -6,25 +6,24 @@
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       
-
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable is-upgraded">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
-          <i id="icon" class="material-icons">search</i>
-        </label>
-
-        <div class="mdl-textfield__expandable-holder" >
-          <input class="mdl-textfield__input super-search__input" type="text" id="js-search__input" />
-        </div>
-      </div>
-
+      <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
       <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-lower-left">
-        <i class="material-icons">more_vert</i>
+        <i class="material-icons">translate</i>
       </button>
 
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
-        {% for option in site.more_vert %}
-        <li><a href="{{ option[1].link }}" class="mdl-menu__item">{{ option[1].name }}</a></li>
-        {% endfor %}
+        {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+        {% for post in posts %} <li><a class="bar" href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a></li> {% endfor %}
+
+        {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+        {% for page in pages %} <li><a class="bar" href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a></li> {% endfor %}
       </ul>
     </div>
   </header>
@@ -34,9 +33,29 @@
     <nav class="mdl-navigation">
     {% for page in site.pages %}
       {% if page.title %}
-      <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl }}" style="margin-left: -5px;"><i class="material-icons" style="margin-right: 5px; color: #929292;">face</i>{{ page.title }}</a>
       {% endif %}
     {% endfor %}
+      <!--<button class="mdl-button mdl-js-button mdl-button--icon" id="menu-lower-left">
+        <i class="material-icons">translate</i>
+      </button>
+
+      <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
+        
+      </ul>-->
+      <button id="demo-menu-lower-left" style="margin-left: 10px;" 
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons" style="color: #929292;">translate</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %} <li><a class="bar" href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a></li> {% endfor %}
+
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% for page in pages %} <li><a class="bar" href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a></li> {% endfor %}
+</ul>
     </nav>
 
   </div>
