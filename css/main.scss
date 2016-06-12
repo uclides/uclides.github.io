@@ -307,7 +307,14 @@ img[alt="directory"] {
   text-decoration: none;
 }   
 .mdl-mini-footer{
-display: block;        
+    display: block;        
+}
+div.android-content.mdl-layout__content{
+    overflow-y: visible;
+    overflow-x: visible;
+}
+#grid{
+    margin: 3em 0 3em 0;
 }
 @media (max-width:2560px){
   .post-main .post-section {
