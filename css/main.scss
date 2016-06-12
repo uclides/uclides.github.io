@@ -189,9 +189,11 @@ text-align: center;
 color: gray;
 }
 .card-lesson {
-  margin: 5px;
-  min-width: 300px;
-  min-height: 100px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: auto;
+  min-height: auto;
   & > .mdl-card__actions {
     display: flex;
     box-sizing: border-box;
@@ -225,7 +227,7 @@ div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover button{
   color: #ffffff;
 }
 div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp i{
-  color: #C8C8C8;
+  color: #9e9e9e;
 }
 div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover i{
   color: #ffffff;
@@ -303,6 +305,9 @@ img[alt="directory"] {
   color: #929292;
   margin-left: 1em;
   text-decoration: none;
+}   
+.mdl-mini-footer{
+display: block;        
 }
 @media (max-width:2560px){
   .post-main .post-section {
@@ -325,7 +330,6 @@ img[alt="directory"] {
   color: #ffffff;
 
 }
-
 }
 
 @media (max-width:320px){
