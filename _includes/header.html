@@ -7,9 +7,30 @@
       <div class="mdl-layout-spacer"></div>
       
       <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <!--<form action="/search.html" method="get">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" id="search-box" name="query" />
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search-box" >
+                  <i class="material-icons">search</i>
+                </label>
+              </div>
+            </form>-->
+            <main class="mdl-layout__content">
+                  <form action="/search.html" method="get">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" style="margin-top:15px;">
+                      <label class="mdl-button mdl-js-button mdl-button--icon" for="search-box">
+                          <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                          <input class="mdl-textfield__input" type="search" id="search-box" name="query" />
+                          <label class="mdl-textfield__label" for="search-box">Search</label>
+                        </div>
+                      </div>
+                  </form>
+            </main>
+            <!--<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
               <i class="material-icons">search</i>
-            </label>
+            </label>-->
             <div class="mdl-textfield__expandable-holder">
               <input class="mdl-textfield__input" type="text" id="search-field">
             </div>

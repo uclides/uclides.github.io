@@ -1,138 +1,71 @@
-/* super-search
-Author: Kushagra Gour (http://kushagragour.in)
-MIT Licensed
-*/
-(function () {
-  var searchFile = '/feed.xml',
-    searchEl,
-    searchInputEl,
-    searchResultsEl,
-    currentInputValue = '',
-    lastSearchResultHash,
-    posts = [];
+(function() {
+  function displaySearchResults(results, store) {
+    var searchResults = document.getElementById('search-results');
 
-  // Changes XML to JSON
-  // Modified version from here: http://davidwalsh.name/convert-xml-json
-  function xmlToJson(xml) {
-    // Create the return object
-    var obj = {};
-    if (xml.nodeType == 3) { // text
-      obj = xml.nodeValue;
-    }
+    if (results.length) { // Are there any results?
+      var appendString = '';
 
-    // do children
-    // If all text nodes inside, get concatenated text from them.
-    var textNodes = [].slice.call(xml.childNodes).filter(function (node) { return node.nodeType === 3; });
-    if (xml.hasChildNodes() && xml.childNodes.length === textNodes.length) {
-      obj = [].slice.call(xml.childNodes).reduce(function (text, node) { return text + node.nodeValue; }, '');
-    }
-    else if (xml.hasChildNodes()) {
-      for(var i = 0; i < xml.childNodes.length; i++) {
-        var item = xml.childNodes.item(i);
-        var nodeName = item.nodeName;
-        if (typeof(obj[nodeName]) == "undefined") {
-          obj[nodeName] = xmlToJson(item);
-        } else {
-          if (typeof(obj[nodeName].push) == "undefined") {
-            var old = obj[nodeName];
-            obj[nodeName] = [];
-            obj[nodeName].push(old);
-          }
-          obj[nodeName].push(xmlToJson(item));
-        }
+      for (var i = 0; i < results.length; i++) {  // Iterate over the results
+        var item = store[results[i].ref];
+
+        appendString +='<li class="mdl-list__item mdl-list__item--three-line txt">'
+    appendString +='<span class="mdl-list__item-primary-content">'
+    appendString +='<i class="material-icons mdl-list__item-avatar">code</i>'
+    appendString +='<span>' + item.title + '</span>'
+    appendString +='<span class="mdl-list__item-text-body">' + item.content.substring(0, 100) + '</span>'
+    appendString +='</span>'
+    appendString +='<span class="mdl-list__item-secondary-content">'
+    appendString +='<a class="mdl-list__item-secondary-action" href="'+item.url+'"><i class="material-icons">send</i></a>'
+    appendString +='</span>'
+    appendString +='</li>'
+
       }
-    }
-    return obj;
-  }
 
-  function getPostsFromXml(xml) {
-    var json = xmlToJson(xml);
-    return json.channel.item;
-  }
-
-  window.toggleSearch = function toggleSearch() {
-    searchEl.classList.toggle('is-active');
-    if (searchEl.classList.contains('is-active')) {
-      // while opening
-      searchInputEl.value = '';
+      searchResults.innerHTML = appendString;
     } else {
-      // while closing
-      searchResultsEl.classList.add('is-hidden');
+      searchResults.innerHTML = '<li>No results found</li>';
     }
-    setTimeout(function () {
-      searchInputEl.focus();
-    }, 210);
   }
 
-  function handleInput() {
-    var currentResultHash, d;
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
 
-    currentInputValue = searchInputEl.value;
-    if (!currentInputValue || currentInputValue.length < 3) {
-      lastSearchResultHash = '';
-      searchResultsEl.classList.add('is-hidden');
-      return;
-    }
-    searchResultsEl.style.offsetWidth;
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
 
-    var matchingPosts = posts.filter(function (post) {
-      if (post.title.indexOf(currentInputValue) !== -1 || post.description.indexOf(currentInputValue) !== -1) {
-        return true;
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
       }
-    });
-    if (!matchingPosts.length) {
-      // searchResultsEl.classList.add('is-hidden');
-      searchEl.classList.toggle('is-active');
     }
-    currentResultHash = matchingPosts.reduce(function(hash, post) { return post.title + hash; }, '');
-    if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
-      searchResultsEl.classList.remove('is-hidden');
-      searchResultsEl.innerHTML = matchingPosts.map(function (post) {
-        d = new Date(post.pubDate);
-        return '<li><a href="' + post.link + '">' + post.title + ' - <span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
-      }).join('');
-    }
-    lastSearchResultHash = currentResultHash;
   }
 
-  function init(options) {
-    searchFile = options.searchFile || searchFile;
-    searchEl = document.querySelector(options.searchSelector || '#js-super-search');
-    searchInputEl = document.querySelector(options.inputSelector || '#js-super-search__input');
-    searchResultsEl = document.querySelector(options.resultsSelector || '#js-super-search__results');
+  var searchTerm = getQueryVariable('query');
 
-    var xmlhttp=new XMLHttpRequest();
-    xmlhttp.open('GET', searchFile);
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState != 4) return;
-      if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
-      var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
-      node = node.children[0];
-      posts = getPostsFromXml(node);
+  if (searchTerm) {
+    document.getElementById('search-box').setAttribute("value", searchTerm);
+
+    // Initalize lunr with the fields it will be searching on. I've given title
+    // a boost of 10 to indicate matches on this field are more important.
+    var idx = lunr(function () {
+      this.field('id');
+      this.field('title', { boost: 10 });
+      this.field('author');
+      this.field('category');
+      this.field('content');
+    });
+
+    for (var key in window.store) { // Add the data to lunr
+      idx.add({
+        'id': key,
+        'title': window.store[key].title,
+        'author': window.store[key].author,
+        'category': window.store[key].category,
+        'content': window.store[key].content
+      });
+
+      var results = idx.search(searchTerm); // Get lunr to perform a search
+      displaySearchResults(results, window.store); // We'll write this in the next section
     }
-    xmlhttp.send();
-
-    // Toggle on ESC key
-    window.addEventListener('keyup', function onKeyPress(e) {
-      if (e.which === 27) {
-        toggleSearch();
-      }
-    });
-
-    // Open on '/' key
-    window.addEventListener('keypress', function onKeyPress(e) {
-      if (e.which === 47 && !searchEl.classList.contains('is-active')) {
-        toggleSearch();
-      }
-    });
-
-    searchInputEl.addEventListener('input', function onInputChange() {
-      handleInput();
-    });
   }
-
-  init.toggle = toggleSearch;
-
-  window.superSearch = init;
-
 })();

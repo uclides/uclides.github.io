@@ -16,7 +16,7 @@ facebook_app_id: 12345
 index:
   es:
   en: en_index.html
-android:
+android:  
   es:
   en: en_android.html  
 

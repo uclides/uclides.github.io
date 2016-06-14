@@ -10,12 +10,11 @@ lang: es
 ---
 Nuestro proceso de aprendizaje se llevará a cabo a través de las practicas. Considero que la mejor manera de aprender es haciendo y practicando. Este primer tema quizás contenga mucha información, pero ya verán que será de gran utilidad. Ya con nuestro Android Studio instalado lo primero que vamos a realizar es crear nuestro primer proyecto. Iniciamos nuestro IDE y seleccionamos la opción correspondiente
 
-![minipic](http://i.imgur.com/Io7Ylwu.png)
 
 Luego procedemos a colocar el nombre a la aplicacion, en este caso omitimos el dominio de compañia ya que en primera instancia
 vamos a realizar pruebas; en post siguientes se explicaran estos temas. Luego nos indica la localidad del proyecto en nuestros equipos:
 
-![directory](http://i.imgur.com/JBysBOz.png)
+![minipic](http://i.imgur.com/Io7Ylwu.png)
 
 A continuación tenemos que establecer la compatibilidad de nuestra nueva aplicación, compatibilidad relacionada con las distintas versiones del SO de telefonos y tablets. Asi como también la version minima que soportará la aplicación. Dejamos la selección por defecto y continuamos
 

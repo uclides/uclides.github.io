@@ -1,0 +1,43 @@
+---
+layout: default
+lang: es
+---
+
+<div class="android-content mdl-layout__content">
+<div class="page-content">
+  <div class="mdl-grid init-post">
+<!--{% assign posts_es = site.posts | where:"lang","es" %}
+{% for post in posts_es %}
+<div class="mdl-cell mdl-cell--4-col card-lesson mdl-card mdl-shadow--1dp">
+  <a href="{{ post.url | prepend: site.baseurl }}"><div class="mdl-card__title mdl-card--expand" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
+  </div></a>
+  <div class="mdl-card__actions mdl-card--border">
+      <p class="title">{{ post.title }}<br>
+    {{ post.date | date: "%b %-d, %Y" }}</p>
+
+    <div class="mdl-layout-spacer"></div>
+  </div>
+</div>
+{% endfor %}-->
+<ul id="search-results" class="demo-list-three mdl-list"></ul>
+</div>
+</div>
+</div>
+
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+
