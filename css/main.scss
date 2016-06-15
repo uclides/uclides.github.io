@@ -91,7 +91,7 @@ color: $grey-color;
 .terminal-window {
   text-align: left;
   margin: auto;
-  height: 400px;
+  height: 200px;
   margin-bottom: 2em;   
   position: relative;
 }
@@ -259,6 +259,10 @@ div.mdl-cell.mdl-cell--4-col.card-lesson.mdl-card.mdl-shadow--1dp:hover #cat3{
   background: url('https://d13yacurqjgara.cloudfront.net/users/180057/screenshots/2256895/comingsoon.jpg') center / cover no-repeat #eee;
   transition: 0.3s ease;
 }
+#form{
+  height: 400px;
+
+}
 div.mdl-card__supporting-text.card_text_custom{
   color: black;
 }
@@ -332,7 +336,89 @@ div.android-content.mdl-layout__content{
   display:block;
   margin:auto;
 }
+.hr{
+  width: 60px;
+  height: 1px;  
+  margin: 60px auto 0;
+  border-bottom: 2px solid #E91E63;
+}
+#form{
+  margin-bottom: 2em;
+}
+//Skill bar
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background:#eee;
+  height:20px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
 
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+width:110px;
+  font-weight:bold;
+  font-size:13px;
+  color:#ffffff;
+  background:#6adcfa;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:20px;
+  line-height:20px;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+  height:20px;
+  width:0px;
+  background:#6adcfa;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:20px;
+  line-height:20px;
+  color:#ffffff;
+  color:rgba(0, 0, 0, 0.4);
+}
+//End skill bar
 @media (max-width:2560px){
   .post-main .post-section {
     border-radius: 2px;
