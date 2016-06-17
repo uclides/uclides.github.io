@@ -17,6 +17,7 @@ window.onresize = function () {
 			w[i].classList.remove("fa-3x");
 			w[i].classList.add("fa-2x");
 		}
+        
 	}
  };
 
