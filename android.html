@@ -41,7 +41,7 @@ permalink: /android/
 <div class="mdl-cell mdl-cell--4-col card-lesson mdl-card mdl-shadow--1dp">
   <a href="{{ post.url | prepend: site.baseurl }}"><div class="mdl-card__title mdl-card--expand" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
   </div></a>
-  <div class="mdl-card__actions mdl-card--border">
+  <div class="mdl-card__actions mdl-card--border post">
       <p class="title">{{ post.title }}<br>
     {{ post.date | date: "%b %-d, %Y" }}</p>
 
