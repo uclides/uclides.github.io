@@ -413,7 +413,7 @@ div.android-content.mdl-layout__content{
   position:absolute;
   top:0;
   left:0;
-width:110px;
+  width:110px;
   font-weight:bold;
   font-size:13px;
   color:#727272;
@@ -519,6 +519,11 @@ width:110px;
 }
 div.skillbar.clearfix:nth-child(7){
     margin-bottom: 10%;
+}
+#unic{
+    margin: 5% 10% 5% 10%;
+    font-style: normal;
+    font-size: 150%;
 }
 @media (max-width:2560px){
   .post-main .post-section {

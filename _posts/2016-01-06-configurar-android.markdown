@@ -8,9 +8,12 @@ image: /img/android-studio.png
 page: "http://127.0.0.1:4000/android/configure-your-computer"
 lang: es
 ---
+###### Deseas iniciar a programar en Android, pero … **¿no sabes cómo?** Te invito a que leas el siguiente post en donde principalmente explicare ese primer paso que debemos dar para iniciar nuestro gran camino de cómo aprender a desarrollar aplicaciones en Android. Para ello les explicaré cada uno de los pasos para realizar en la configuración de nuestro equipo. {#unic}
 
-Iniciaremos configurando todo lo necesario para empezar a desarrollar nuestras aplicaciones en android. Para ello
-necesitaremos un equipo que cumpla con los siguientes requisitos mínimos:
+Instalaremos y configuraremos todas las herramientas necesarias. Quizás sean pasos sencillos, pero personalmente había presentado algunos inconvenientes al realizar mi configuración en mi equipo personal. Es por ello que el día de hoy me gustaría acompañarlos y ayudarlos en dicha tarea. Si después de leerlo te queda alguna duda, por favor deja un comentario y estaré encantado de responderlo.  
+
+
+Ahora bien, para que nuestro entorno de desarrollo funcione de una manera fluida nos recomiendan que el equipo donde decidamos instalar las aplicaciones dispongan de los siguientes requisitos mínimos:
 
 ##### Windows
 * Microsoft® Windows® 7/8/10 (32- ó 64-bit)
@@ -35,6 +38,7 @@ necesitaremos un equipo que cumpla con los siguientes requisitos mínimos:
 * resolución minima 1280 x 800 
 * Java Development Kit (JDK) 8
 
+Les recomiendo que consideren estos requisitos porque anteriormente tenía un equipo que no cumplía dichas características y de verdad no se los recomiendo. Así evitan un disgusto como el que he padecido :-).  
 
 #### Descargar elementos necesarios
 
